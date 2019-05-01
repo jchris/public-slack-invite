@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>vanilla html js netlify example</title>
+    <title>Public Slack Invite</title>
 
     <link rel="stylesheet" type="text/css" href="index.css" />
     <script type="text/javascript" src="/script.js"></script>
@@ -12,11 +12,17 @@
   <body>
     <div class="container">
       <h1>Vanilla HTML JS netlify example</h1>
-      <div class="center"><button id="button">Click me</button></div>
+      <div class="center">
+        <form method="post" action="/.netlify/functions/hello-world">
+          <input name="email" type="email" />
+          <input type="submit" />
+        </form>
+
+        <button id="button">Click me</button>
+      </div>
       <pre id="message">
-      Click the button!
-    </pre
-      >
+        Click the button!
+      </pre>
       <div>
         <a href="https://github.com/netlify-labs/vanilla-html-js-example">View source</a>
       </div>

@@ -3,8 +3,11 @@ const axios = require("axios");
 
 exports.handler = async (event, context) => {
   try {
-    console.log(event);
-    const formData = parse(Buffer.from(event.body, 'base64').toString())
+    var formString = event.body;
+    if (event.isBase64Encoded) {
+      formString = Buffer.from(formString, 'base64').toString()
+    }
+    const formData = parse(formString)
     const email = formData.email.trim();
     const baseURL = "https://slack.com/api/users.admin.invite"
     const toSlack = `email=${encodeURIComponent(email)}&token=${process.env.SLACK_LEGACY_TOKEN}&set_active=true`;

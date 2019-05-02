@@ -1,11 +1,13 @@
 ## What this is
 
-this shows how to use netlify with just plain html js and css, together with netlify functions.
+A Slack invite generator service for Fauna's community Slack. You can use it for any Slack you are logged into as an admin by provisioning your own SLACK_LEGACY_TOKEN (and redesigning the `index.html` page). Set this environment variable in your Netlify control panel.
+
+This app shows how to use Netlify with just plain html js and css, together with Netlify functions.
 
 ## How to use (1 click)
 
 Click this to fork and deploy
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-labs/vanilla-html-example)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/fauna/public-slack-invite)
 
 ## How to use (manual)
 
@@ -22,7 +24,7 @@ npm i -g netlify-cli
 then:
 
 ```
-git clone https://github.com/netlify-labs/vanilla-html-example # or clone your own fork of this repo
+git clone https://github.com/fauna/public-slack-invite # or clone your own fork of this repo
 cd vanilla-html-example
 netlify dev
 ```

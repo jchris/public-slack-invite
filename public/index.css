@@ -15,3 +15,10 @@
   background-color: #ffd370;
   text-align: center;
 }
+
+.editable p { text-align:center; }
+
+body.non-gated .bg-wrapper {
+ background-size:cover;
+ height:100%;
+}

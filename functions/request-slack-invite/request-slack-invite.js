@@ -12,7 +12,7 @@ exports.handler = async (event, context) => {
     if (response.status !== 200) {
       return { statusCode: 500, body: "error with slack api" }
     } else {
-      return { statusCode: 200, body: JSON.stringify({ success: `Invited ${email}` }) }
+      return { statusCode: 200, body: JSON.stringify({ success: `Invited ${email}, check your email.` }) }
     }
   } catch (err) {
     return { statusCode: 500, body: err.toString() }

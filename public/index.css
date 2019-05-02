@@ -1,21 +1,9 @@
-pre {
+#ngw-entry-content #form-wrapper {
+  width: 65% !important;
   margin: 0 auto;
-  padding: 10px;
-  background: lightcyan;
-  text-align: center;
+  float:none;
 }
-.center {
-  text-align: center;
-  padding: 10px;
-}
-.center button {
-  border: 3px solid green;
-  background: white;
-  border-radius: 10px;
-  padding: 10px;
-}
-.container {
-  margin: 0 auto;
-  max-width: 500px;
-  width: 50%;
+
+#ngw-entry-content {
+  width: inherit !important;
 }

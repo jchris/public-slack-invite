@@ -1,24 +1,130 @@
-#ngw-entry-content #form-wrapper {
-  width: 65% !important;
-  margin: 20px auto;
-  float:none;
+* { 
+  box-sizing: border-box;
 }
 
-#ngw-entry-content {
-  width: inherit !important;
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  background-image: url(https://fauna.com/assets/site/heroes/Fauna_website_HOME_hero_v2_opt.jpg);
+  background-size: cover;
+  height: 100%;
+  font-family: sans-serif;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: acumin-pro, Helvetica, sans-serif;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+@media screen and (min-width:1024px){
+  h1 {
+    font-size: 32px;
+  }
+}
+
+a {
+  color: #01e399;
+}
+
+header, main, footer {
+  display: flex;
+  justify-content: center;
+  padding: 0 5%;
+}
+
+main {
+  margin-bottom: 10%;
+  flex-direction: column;
+  align-items: center;
+}
+
+header, footer {
+  max-height: 120px;
+  flex: 1;
+  align-items: center;
+}
+
+header img {
+  width: 150px;
+}
+
+input, input[type="submit"] {
+  height: 50px;
+  outline: 0;
+  border: 0;
+  font-size: 18px;
+}
+
+input[type="email"] {
+  flex: 1;
+  border: 1px solid #eaeaea;
+  padding: 0 12px;
+}
+
+input[type="submit"] {
+  background: #01e399;
+  color: #3642ce;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 12px 20px;
+}
+
+section {
+  background: #2a35c5;
+  background: rgb(255,255,255);
+  background: linear-gradient(167deg, rgb(71, 55, 202) 24%, rgba(42,53,197,1) 100%, rgba(255,255,255,1) 100%);
+  color: #fefefe;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section h1, section p {
+  text-align: center;
+  margin: 0;
+}
+
+section p {
+  margin-bottom: 0;
+}
+
+.form-wrapper {
+  padding: 10% 12%;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  padding: 10% 0 15% 0;
+}
+
+footer {
+  color: #fefefe;
+}
+
+#flash-wrapper {
+  width: 100%;
 }
 
 #flash {
-  width: 65% !important;
-  margin: 20px auto;
-  padding: 4px;
-  background-color: #ffd370;
-  text-align: center;
+ background: #090c39;
+ padding: 5%;
+ width: 100%;
+ text-align: center;
 }
 
 .editable p { text-align:center; }
 
-body.non-gated .bg-wrapper {
- background-size:cover;
- height:100%;
-}
+

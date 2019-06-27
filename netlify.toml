@@ -1,4 +1,5 @@
 # example netlify.toml
 [build]
+  command = "#"
   functions = "functions"
   publish = "public"

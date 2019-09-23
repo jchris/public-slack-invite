@@ -5,7 +5,7 @@ this shows how to use netlify with just plain html js and css, together with net
 ## How to use (1 click)
 
 Click this to fork and deploy
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-labs/vanilla-html-example)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/jchris/public-slack-invite)
 
 ## How to use (manual)
 

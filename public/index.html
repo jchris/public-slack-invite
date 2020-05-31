@@ -27,25 +27,39 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <header class="logo-header">
       <a href="http://www.fauna.com" class="scrollto">
-        <img title="FaunaDB Logo" src="https://fauna.com/assets/pardot/img/Fauna_logo_white_web.png">
+        <img class="mobile" title="FaunaDB Logo" src="img/fauna-logo-full-dk-blue.svg">
+        <img class="desktop" title="FaunaDB Logo" src="https://fauna.com/assets/pardot/img/Fauna_logo_white_web.png">
       </a>
     </header>
     <main>
-      <section>
-        <div id="flash-wrapper"></div>
-        <div class="form-wrapper">
-          <div class="editable title">
-            <h1>Join Fauna's Community Slack</h1>
-          </div>
-            <form class="form" method="post" action="/.netlify/functions/request-slack-invite">
-              <input name="email" type="email" placeholder="enter e-mail" />
-              <input type="submit" value="Join" />
-            </form>
-            <p>
-              If you are already a member, <a href="https://fauna-community.slack.com/">click here to sign in.</a>
-            </p>
+      <div class="content-wrapper">
+        <h1 class="intro">Join the Fauna Community! <small>Get your questions answered and share your knowledge.</small></h1>
+        <div class="row">
+          <section>
+            <div class="description">
+              <div class="logo"><img alt="discourse-logo" src="img/discourse_logo.png"/></div>
+              <h2>Discourse</h2>
+              <p>
+                Check our Discourse forums to see if your question has already been answered. If your issue has not been addressed, post it there. We monitor it closely and respond promptly.
+              </p>
+            </div>
+            <div class="discourse-link"><a class="button" href="https://forums.fauna.com/">Go to Discourse</a></div>
+          </section>
+          <section>
+              <div class="description">
+                <div class="logo"><img alt="slack-logo" src="img/slack_logo.png"/></div>
+                <h2>Slack</h2>
+                <p>Mingle with your peers, showcase your projects, and chat in real-time. If you are already a member, <a href="https://fauna-community.slack.com/">click here to sign in.</a>
+                </p>
+              </div>
+                <form class="form" method="post" action="/.netlify/functions/request-slack-invite">
+                  <input name="email" type="email" placeholder="enter e-mail" />
+                  <input type="submit" value="Join" />
+                </form>
+                <div id="flash-wrapper"></div>
+          </section>
         </div>
-      </section>
+      </div>
     </main>
     <footer>
       <p><a href="https://github.com/fauna/public-slack-invite">Fork this code</a>&nbsp;(and deploy on Netlify) to invite people to your own Slack.</p>

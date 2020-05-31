@@ -4,12 +4,11 @@
 
 html, body {
   height: 100%;
+  color: #61626b;
 }
 
 body {
   display: flex;
-  background-image: url(https://fauna.com/assets/site/heroes/Fauna_website_HOME_hero_v2_opt.jpg);
-  background-size: cover;
   height: 100%;
   font-family: sans-serif;
   flex-direction: column;
@@ -17,31 +16,26 @@ body {
   font-family: acumin-pro, Helvetica, sans-serif;
 }
 
-h1 {
-  font-weight: 600;
-  font-size: 20px;
-}
-
-@media screen and (min-width:1024px){
-  h1 {
-    font-size: 32px;
-  }
-}
-
 a {
-  color: #01e399;
+  color: #0cbb9c;
+  font-weight: 600;
+  text-decoration: none;
 }
 
-header, main, footer {
+p{
+  line-height: 1.5;
+}
+
+header, footer {
   display: flex;
   justify-content: center;
   padding: 0 5%;
 }
 
 main {
-  margin-bottom: 10%;
   flex-direction: column;
   align-items: center;
+  padding: 10px;
 }
 
 header, footer {
@@ -54,11 +48,48 @@ header img {
   width: 150px;
 }
 
-input, input[type="submit"] {
+h1{
+  font-size: 26px;
+  font-weight: 400;
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.3;
+  padding-bottom: 40px;
+}
+
+h1 small {
+  display: block;
+  color: #61626b;
+  margin-top: 8px;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+.content-wrapper{
+  background: white;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.logo{
+  text-align: center;
+}
+input, input[type="submit"], .button {
   height: 50px;
   outline: 0;
   border: 0;
   font-size: 18px;
+  display: flex;
+  align-items: center;
 }
 
 input[type="email"] {
@@ -67,64 +98,101 @@ input[type="email"] {
   padding: 0 12px;
 }
 
-input[type="submit"] {
-  background: #01e399;
-  color: #3642ce;
-  text-transform: uppercase;
-  font-size: 13px;
+input[type="submit"], .button {
+  background: #0cbb9c;
+  color: white;
   line-height: 16px;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-weight: 500;
   padding: 12px 20px;
+  cursor: pointer;
 }
 
 section {
-  background: #2a35c5;
-  background: rgb(255,255,255);
-  background: linear-gradient(167deg, rgb(71, 55, 202) 24%, rgba(42,53,197,1) 100%, rgba(255,255,255,1) 100%);
-  color: #fefefe;
-  width: 100%;
-  max-width: 600px;
+  background: white;
+  width: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 40px 60px;
+  box-shadow: 2px 2px 11px rgba(0,0,0,.2);
+  border-radius: 10px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+section:first-of-type { 
+  margin-bottom: 20px;
 }
 
-section h1, section p {
-  text-align: center;
-  margin: 0;
+section .description{
+  max-width: 370px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-section p {
+section h2 {
   margin-bottom: 0;
 }
 
-.form-wrapper {
-  padding: 10% 12%;
+section img {
+  max-width: 160px;
+}
+
+section .logo {
+  height: 70px;
 }
 
 form {
   display: flex;
   width: 100%;
-  padding: 10% 0 15% 0;
 }
-
-footer {
-  color: #fefefe;
+.discourse-link{     
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
 }
+/* .discourse-link:after {
+  content: "→";
+  color: #0cbb9c;
+  padding-left: 5px;
+  transition: all 0.2s ease-out;
+  position: relative;
+  top: 1px;
+} */
 
 #flash-wrapper {
   width: 100%;
 }
 
 #flash {
- background: #090c39;
- padding: 5%;
- width: 100%;
- text-align: center;
+  width: 100%;
+  text-align: left;
+  color: #e01e5a;
+  padding-top: 10px;
+}
+.desktop{
+  display: none;
 }
 
-.editable p { text-align:center; }
-
-
+@media screen and (min-width: 768px){
+  .desktop{ display: flex; }
+  .mobile { display: none;}
+  body{
+    background-image: url(https://fauna.com/assets/site/heroes/Fauna_website_HOME_hero_v2_opt.jpg);
+    background-size: cover;
+  }
+  .content-wrapper {   padding: 50px 60px 60px 60px; }
+  .row { flex-direction: row;}
+  section { width: 50%;  max-width: 480px; }
+  section:first-of-type { margin-right: 15px; margin-bottom: 0;}
+  section:last-of-type { margin-left: 15px; }
+  h1 {color:initial;}
+  footer {
+    color: #fefefe;
+  }
+}
+@media screen and (min-width: 1024px){
+  section{ max-width: 480px; }
+}

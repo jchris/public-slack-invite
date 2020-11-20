@@ -4,7 +4,7 @@
 
 html, body {
   height: 100%;
-  color: #61626b;
+  color: #000000;
 }
 
 body {
@@ -12,12 +12,14 @@ body {
   height: 100%;
   font-family: sans-serif;
   flex-direction: column;
-  justify-content: space-between;
-  font-family: acumin-pro, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: acumin-pro, sans-serif;
+    background-color: #F3F4FF
 }
 
 a {
-  color: #0cbb9c;
+  color: #3F00A5;
   font-weight: 600;
   text-decoration: none;
 }
@@ -44,10 +46,6 @@ header, footer {
   align-items: center;
 }
 
-header img {
-  width: 150px;
-}
-
 h1{
   font-size: 26px;
   font-weight: 400;
@@ -60,16 +58,15 @@ h1{
 
 h1 small {
   display: block;
-  color: #61626b;
   margin-top: 8px;
 }
 
 h2 {
   font-weight: 500;
+  margin-top: 0px;
 }
 
 .content-wrapper{
-  background: white;
   max-width: 1120px;
   margin: 0 auto;
 }
@@ -96,27 +93,30 @@ input[type="email"] {
   flex: 1;
   border: 1px solid #eaeaea;
   padding: 0 12px;
+  margin-right:15px;
 }
 
 input[type="submit"], .button {
-  background: #0cbb9c;
+  background: linear-gradient(270deg, #813EEF 0%, #3F00A5 100%);
+ box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.04);
   color: white;
   line-height: 16px;
   font-weight: 500;
   padding: 12px 20px;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 section {
-  background: white;
+  border-radius: 6px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F9FAFF 100%);
+    box-shadow:  0px 0px 8px rgba(0, 0, 0, 0.05), 0px 30px 30px rgba(100, 72, 72, 0.05);
   width: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 40px 60px;
-  box-shadow: 2px 2px 11px rgba(0,0,0,.2);
-  border-radius: 10px;
+  padding: 50px 60px;
   max-width: 480px;
   margin: 0 auto;
 }
@@ -179,19 +179,12 @@ form {
 @media screen and (min-width: 768px){
   .desktop{ display: flex; }
   .mobile { display: none;}
-  body{
-    background-image: url(https://fauna.com/assets/site/heroes/Fauna_website_HOME_hero_v2_opt.jpg);
-    background-size: cover;
-  }
   .content-wrapper {   padding: 50px 60px 60px 60px; }
   .row { flex-direction: row;}
   section { width: 50%;  max-width: 480px; }
   section:first-of-type { margin-right: 15px; margin-bottom: 0;}
   section:last-of-type { margin-left: 15px; }
   h1 {color:initial;}
-  footer {
-    color: #fefefe;
-  }
 }
 @media screen and (min-width: 1024px){
   section{ max-width: 480px; }
